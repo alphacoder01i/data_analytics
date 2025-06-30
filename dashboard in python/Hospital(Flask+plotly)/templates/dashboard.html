@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Healthcare Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>🩺 Healthcare Management Dashboard</h1>
+
+    <div class="kpi-container">
+        <div class="kpi">👨‍⚕️ Doctors<br>{{ total_doctors }}</div>
+        <div class="kpi">🧑‍🤝‍🧑 Patients<br>{{ total_patients }}</div>
+        <div class="kpi">📅 Appointments<br>{{ total_appointments }}</div>
+    </div>
+
+    <div class="chart">{{ appt_chart|safe }}</div>
+    <div class="chart">{{ revenue_chart|safe }}</div>
+    <div class="chart">{{ treat_chart|safe }}</div>
+</body>
+</html>
